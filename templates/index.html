@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Движение Первых</title>
+
+  <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+<header>
+  <div class="header-content">
+    <div class="logo-block">
+      <div class="logo-container">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Логотип" class="logo">
+      </div>
+      <div class="title-container">
+        <h1>Движение Первых</h1>
+      </div>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://t.me/luck9B" target="_blank" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+      <a href="https://vk.com/pervyemagnitka?from=groups" target="_blank" aria-label="ВКонтакте">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+          <path d="M12.01 0C5.382 0 0 5.373 0 12c0 6.628 5.382 12 12.01 12C18.627 24 24 18.628 24 12c0-6.627-5.373-12-11.99-12Zm5.525 16.426h-1.298c-.475 0-.69-.383-1.646-1.34-.829-.812-1.19-.92-1.398-.92-.288 0-.37.082-.37.478v1.29c0 .347-.113.493-.898.493-1.325 0-2.792-.783-3.824-2.232C6.84 12.44 6 10.132 6 9.77c0-.236.093-.459.478-.459h1.297c.336 0 .475.152.609.512.657 1.828 1.743 3.442 2.203 3.442.172 0 .25-.08.25-.496V11.02c-.053-.896-.528-.972-.528-1.277 0-.149.12-.293.3-.293h2.035c.253 0 .35.112.35.48v2.593c0 .283.122.379.198.379.172 0 .308-.096.605-.393 0 0 1.05-1.199 1.458-2.274.12-.33.248-.46.587-.46h1.297c.417 0 .504.207.417.496-.176.822-1.874 3.213-1.874 3.213-.152.248-.213.365 0 .623.152.208.637.612.964.987.605.688 1.061 1.266 1.185 1.649.122.386-.09.588-.546.588Z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="events">
+  <h2>Недавние мероприятия</h2>
+
+  <div class="slider-container">
+    <button class="outer-btn prev" title="Назад" aria-label="Предыдущий слайд">&#10094;</button>
+
+    <div class="slider-wrapper">
+      <div class="slider">
+
+        <div class="event-card">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/event1.jpg') }}" alt="День Школьных Библиотек">
+            <div class="image-info">
+              <h3>День Школьных Библиотек</h3>
+              <p>25 октября 2025</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/event2.jpg') }}" alt="Наставники Орлят России">
+            <div class="image-info">
+              <h3>Наставники Орлят России</h3>
+              <p>22 октября 2025</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="image-container">
+            <img src="{{ url_for('static', filename='images/event3.jpg') }}" alt="#ВыборыПервых">
+            <div class="image-info">
+              <h3>#ВыборыПервых</h3>
+              <p>10 сентября 2025</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="outer-btn next" title="Вперёд" aria-label="Следующий слайд">&#10095;</button>
+  </div>
+</section>
+</main>
+
+<!-- Оверлей для просмотра изображения -->
+<div id="overlay" class="overlay hidden">
+  <div class="overlay-content">
+    <img id="overlayImage" src="" alt="Просмотр изображения">
+    <button id="closeBtn" class="close-btn" aria-label="Закрыть">&times;</button>
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/carousel.js') }}" defer></script>
+</body>
+</html>
